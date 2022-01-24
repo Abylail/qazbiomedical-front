@@ -1,0 +1,34 @@
+// BREAK POINTS
+$bp__mobile: 900px;
+
+// LAYOUT
+$layout__max-page-width: 1200px;
+
+// COLORS
+$color__primary: #0F15A3;
+$color__grey: rgba(157, 163, 172, 0.3);;
+$color__light-grey: #F5F8FA;
+$color__font_primary: #263640;
+$color__font_secondary: #929A9F;
+
+// FONT SIZE
+$fs__title: 32px;
+$fs__text: 20px;
+$fs__default: 16px;
+
+//@media (max-width: $bp__mobile) {
+//  $fs__title: 28px !global;
+//  $fs__text: 16px !global;
+//  $fs__default: 14px !global;
+//}
+
+// BORDER
+$border-radius: 6px;
+$border-radius--mini: 2px;
+
+// TRANSITION
+$transition: .15s;
+
+// Z-INDEX
+$headerIndex: 10;
+$headerMobileMenuIndex: 11;
