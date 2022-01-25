@@ -14,11 +14,13 @@
         <input
           class="price-request__input price-request__row__left"
           placeholder="Email"
+          v-maska="'XXX!@'"
           v-model="sendForm.email"
         />
         <input
           class="price-request__input price-request__row__right"
-          placeholder="Телефон"
+          placeholder="+7 (###) ###-##-##"
+          v-maska="'+7 (###) ###-##-##'"
           v-model="sendForm.phone"
         />
       </div>
@@ -41,8 +43,11 @@
 </template>
 
 <script>
+import { maska } from 'maska'
+
 export default {
   name: "priceRequest",
+  directives: { maska },
   data: () => ({
     sendForm: {
       name: null,
