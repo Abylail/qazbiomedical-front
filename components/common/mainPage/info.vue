@@ -56,7 +56,7 @@ export default {
     }
 
     &__picture {
-      background: url("~assets/images/info-first.jpg");
+      background: url("~assets/images/info-first.png");
       background-size: cover;
     }
 

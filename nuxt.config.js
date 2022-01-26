@@ -1,7 +1,7 @@
-export default {
+module.exports = {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'qaz-bio-medical-front',
+    title: 'Qaz Bio Medical',
     htmlAttrs: {
       lang: 'en'
     },
@@ -44,6 +44,13 @@ export default {
     '@nuxtjs/style-resources',
   ],
 
+  ssr: true,
+
+  target: 'static',
+
+  //  Are you interested in participating? No
+  telemetry: false,
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
@@ -62,3 +69,4 @@ export default {
   build: {
   }
 }
+
