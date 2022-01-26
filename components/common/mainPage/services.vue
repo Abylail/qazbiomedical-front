@@ -189,20 +189,24 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 312px;
 
     img {
-      height: 200px;
-      width: 312px;
+      width: 100%;
     }
 
     label {
       margin-top: 16px;
       font-size: $fs__default;
+      word-break: break-word;
+      text-align: center;
     }
 
     p {
       color: $color__font_secondary;
       font-size: $fs__default;
+      word-break: break-word;
+      text-align: center;
     }
   }
 
@@ -214,7 +218,7 @@ export default {
 
   &__check-item {
     height: 260px;
-    width: 240px;
+    width: 280px;
     background: white;
     padding: 12px;
     box-shadow: 0 4px 40px rgba(0, 0, 0, 0.07);
@@ -230,6 +234,7 @@ export default {
     label {
       font-size: $fs__text;
       color: $color__font_primary;
+      word-break: break-word;
     }
 
     p {

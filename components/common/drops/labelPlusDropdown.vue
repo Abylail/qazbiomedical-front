@@ -2,10 +2,9 @@
   <div class="label-plus-dropdown" :class="{'label-plus-dropdown--open': isOpen}">
     <div class="label-plus-dropdown__head">
       <h3 class="label-plus-dropdown__title">{{ title }}</h3>
-      <div class="label-plus-dropdown__open-tool" @click="openToggle()">
-        <span v-if="isOpen"><div class="minus"/></span>
-        <span v-else><div class="plus"/></span>
-      </div>
+      <button class="label-plus-dropdown__open-tool" @click="openToggle()">
+        <div class="plus-minus" :class="{active: isOpen}"><span/><span/></div>
+      </button>
     </div>
 
     <Slide>
@@ -53,7 +52,7 @@ export default {
 .label-plus-dropdown {
   transition: $transition;
   border-bottom: 1px solid $color__grey;
-  padding: 8px 10px;
+  padding: 8px 10px 8px 0;
   margin-top: 12px;
 
   &--open {
@@ -65,7 +64,7 @@ export default {
 
   &__head {
     display: grid;
-    grid-template-columns: 1fr 15px;
+    grid-template-columns: 1fr 25px;
     column-gap: 10px;
   }
 
@@ -74,14 +73,19 @@ export default {
   }
 
   &__title {
-    font-size: $fs__text;
+    font-size: $fs__default;
     color: $color__font_primary;
   }
 
   &__open-tool {
+    background: none;
+    border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
+    margin-right: 20px;
+    height: 25px;
+    width: 25px;
   }
 
   &__send-request {
@@ -91,6 +95,29 @@ export default {
     padding-bottom: 8px;
   }
 
+}
+
+.plus-minus {
+
+  span {
+    display: block;
+    width: 20px;
+    height: 3px;
+    position: absolute;
+    background: #000;
+    border-radius: 3px;
+    transition: .3s;
+
+    &:first-child {
+      transform: rotate(90deg);
+    }
+  }
+
+  &.active {
+    span:first-child {
+      transform: rotate(0deg);
+    }
+  }
 }
 
 .plus {

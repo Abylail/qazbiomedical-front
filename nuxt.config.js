@@ -1,18 +1,18 @@
 module.exports = {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Qaz Bio Medical',
+    title: 'Qaz bio medical',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Поверка средств измерений и мединцинского оборудывания' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/logo.svg' }
     ]
   },
 
@@ -56,10 +56,10 @@ module.exports = {
     '@nuxtjs/axios',
     ['nuxt-mail', {
       message: {
-        to: 'qazbiomedical@mail.ru',
+        to: 'bazarbayev.abylay@gmail.com',
       },
       smtp: {
-        host: "smtp.example.com",
+        host: "mail.qazbm.kz",
         port: 587,
       },
     }],

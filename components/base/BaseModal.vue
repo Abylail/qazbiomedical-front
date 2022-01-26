@@ -62,8 +62,8 @@ export default {
   &__window {
     border-radius: $border-radius;
     max-width: 700px;
-    width: 95%;
-    max-height: 95vh;
+    width: 90%;
+    max-height: 90%;
     background: white;
     overflow: hidden;
     display: grid;

@@ -99,7 +99,7 @@ export default {
         window.scrollTo(0, document.body.offsetHeight);
         return;
       }
-      const header = 130;
+      const header = 80;
       const offsetTop = document.getElementById(anchor)?.offsetTop || 0;
       window.scrollTo(0, offsetTop - header);
     },
@@ -116,7 +116,7 @@ export default {
     activeMenuController(scrollY) {
       let activeNext = null;
       Object.keys(this.menu).forEach(key => {
-        if (scrollY >= this.menu[key].offsetTop) {
+        if (scrollY >= this.menu[key].offsetTop - 100) {
           activeNext = key;
         }
         else {
@@ -152,15 +152,17 @@ export default {
 <style lang="scss" scoped>
 $shadowHeight: 10px;
 $headerHeight: 50px;
-$headerPadding: 50px; // vertical
+$headerPadding: 25px; // vertical
 
 #shadow {
   &::before {
+    z-index: $headerIndex - 1;
     content: "";
     display: block;
     height: $shadowHeight;
-    position: sticky;
-    top: $headerHeight + 2*$headerPadding - $shadowHeight;
+    width: 100%;
+    position: fixed;
+    top: $headerHeight + 2*$headerPadding;
     background: linear-gradient(180deg,
       rgba(0, 0, 0, .4) 0%,
       rgba(0, 0, 0, .15) 50%,
@@ -173,16 +175,16 @@ $headerPadding: 50px; // vertical
 header {
   position: sticky;
   top: -$shadowHeight;
-  z-index: $headerIndex;
+  z-index: $headerIndex - 2;
   @extend #shadow;
 }
 .default-header {
   position: relative;
-  padding: $headerPadding 0;
+  padding: $headerPadding + 2*$shadowHeight 0 $headerPadding;
   width: 100%;
   background: white;
   top: -$shadowHeight;
-  z-index: 10;
+  z-index: $headerIndex;
   //box-shadow: 0px 8px 10px 0px rgba(34, 60, 80, 0.2);
 
   &__wrapper {
