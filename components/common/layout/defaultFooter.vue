@@ -2,6 +2,12 @@
   <footer class="default-footer">
     <div class="layout-wrapper">
 
+      <div class="default-footer__logo">
+        <a>
+          <base-icon>full-logo</base-icon>
+        </a>
+      </div>
+
       <div class="default-footer__contacts">
 
         <a class="default-footer__contact" href="tel:+77172953326">
@@ -27,9 +33,6 @@
         </div>
 
       </div>
-
-
-      <div class="mt-50"><a class="default-footer__name">QAZ BIO MEDICAL</a></div>
 
       <div class="default-footer__copyright mt-50">
         {{ currentYear }} © ТОО "QazBioMedical"
@@ -58,7 +61,7 @@ export default {
   &__contacts {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     @media (max-width: $bp__mobile) {
       flex-direction: column;
     }
@@ -70,15 +73,18 @@ export default {
     display: flex;
     align-items: center;
     font-size: $fs__text;
+    margin-right: 30px;
     img { margin-right: 10px }
     @media (max-width: $bp__mobile) {
       margin-bottom: 20px;
     }
   }
 
-  &__name {
+  &__logo {
     color: white;
     font-size: $fs__title;
+    text-align: center;
+    margin: 30px;
   }
 
   &__copyright {

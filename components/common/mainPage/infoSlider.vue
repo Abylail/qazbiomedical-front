@@ -83,35 +83,39 @@ export default {
   &__image {
     grid-area: image;
     position: relative;
+    padding-top: 25px;
 
     img {
       position: absolute;
-      height: 700px;
-      width: 450px;
+      width: 350px;
+      height: 230px;
       z-index: 1;
+      margin-top: 20px;
+      margin-left: 20px;
       @media(max-width: $bp__mobile) {
         position: relative;
         width: 100%;
-        height: 500px;
+        height: auto;
+        margin: 0;
       }
     }
   }
 
   &__wallpaper {
     position: absolute;
-    height: 600px;
     width: 350px;
+    height: 230px;
     background: $color__primary;
     @media(max-width: $bp__mobile) {
-      width: 80%;
-      height: 400px;
+      display: none;
+      //width: 80%;
+      //height: 400px;
     }
   }
 
   &__slider-wrapper {
     grid-area: slider;
     overflow: auto;
-    padding-top: 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -127,8 +131,8 @@ export default {
   }
 
   &__slide {
-    height: 300px;
     font-size: $fs__text;
+    padding-bottom: 30px;
 
     @media (max-width: $bp__mobile) {
       height: auto;

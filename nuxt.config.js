@@ -1,7 +1,7 @@
 module.exports = {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Qaz bio medical',
+    title: 'ТОО "Qaz Bio Medical"',
     htmlAttrs: {
       lang: 'en'
     },

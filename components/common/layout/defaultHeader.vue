@@ -6,8 +6,7 @@
       <!-- LEFT (LOGO) -->
       <div class="default-header__side">
         <a class="default-header__logo">
-          <img src="/logo.svg"/>
-          <span>QAZ BIO MEDICAL</span>
+          <base-icon>full-logo</base-icon>
         </a>
       </div>
 
@@ -23,7 +22,7 @@
           >{{ item.title }}</button>
         </div>
 
-        <base-button @click="go('priceRequest')">Узнать стоимость</base-button>
+        <base-button class="default-header__get-price" type="primary-reverse" @click="go('priceRequest')">Узнать стоимость</base-button>
 
         <base-button class="default-header__navigator-mobile-toggle" type="empty" @click="mobileMenuToggle()">
           <div class="hamburger" :class="{active: mobileMenuOpen}"><span/><span/><span/></div>
@@ -182,7 +181,7 @@ header {
   position: relative;
   padding: $headerPadding + 2*$shadowHeight 0 $headerPadding;
   width: 100%;
-  background: white;
+  background: $color__primary;
   top: -$shadowHeight;
   z-index: $headerIndex;
   //box-shadow: 0px 8px 10px 0px rgba(34, 60, 80, 0.2);
@@ -207,12 +206,11 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
 
-    img {
-      height: 40px;
-      width: 40px;
-      margin-right: 4px;
-      font-size: $fs__default;
+  &__get-price {
+    @media (max-width: $bp__mobile) {
+      display: none !important;
     }
   }
 
@@ -227,14 +225,13 @@ header {
     transition: $transition;
     background: none;
     border: none;
-    color: $color__font_primary;
+    color: white;
     font-size: $fs__default;
     cursor: pointer;
     &:not(:first-child) { margin-left: 20px }
 
     &.active {
-      color: $color__primary;
-      border-bottom: 2px solid $color__primary;
+      border-bottom: 2px solid white;
       padding: 10px 0;
     }
   }
@@ -251,7 +248,7 @@ header {
     position: fixed;
     width: 100%;
     top: $headerHeight + 2*$headerPadding - $shadowHeight - 1px;
-    background: #fff;
+    background: $color__primary;
     z-index: $headerMobileMenuIndex;
     display: flex;
     flex-direction: column;
@@ -262,9 +259,12 @@ header {
     border: none;
     padding: 10px;
     font-size: $fs__text;
+    color: #fff;
+    text-underline-offset: 5px;
     &.active {
-      background: $color__primary;
-      color: #fff;
+      //background: #fff;
+      //color: $color__font_primary;
+      text-decoration: underline;
     }
   }
 
@@ -295,7 +295,7 @@ header {
     &:not(:last-child) {margin-bottom: $spaceBetween;}
     position: relative;
 
-    background: #000;
+    background: #fff;
     border-radius: 3px;
 
     z-index: 1;
@@ -309,8 +309,8 @@ header {
   &.active {
     span {
       opacity: 1;
-      transform: rotate(45deg) translate(0, -1px);
-      background: #232323;
+      transform: rotate(45deg) translate(0, -2px);
+      background: #fff;
       &:last-child
       {
         transform: rotate(-45deg) translate(0, -1px);

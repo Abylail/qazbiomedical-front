@@ -13,7 +13,7 @@ export default {
   props: {
     type:{
       type: String,
-      default: "primary", // types: primary, more, mini, empty
+      default: "primary", // types: primary, more, mini, empty, primary-reverse
     }
   },
   computed: {
@@ -42,6 +42,14 @@ export default {
     border-radius: $border-radius;
     height: 40px;
     padding: 10px 20px;
+
+    &-reverse {
+      background: white;
+      color: $color__primary;
+      border-radius: $border-radius;
+      height: 40px;
+      padding: 10px 20px;
+    }
   }
 
   &--more {

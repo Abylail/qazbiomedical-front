@@ -49,7 +49,11 @@
       </label-plus-dropdown>
 
 
-      <label-plus-dropdown title="Аттестация испытательного оборудования" sendRequest/>
+      <label-plus-dropdown title="Аттестация испытательного оборудования" sendRequest>
+        <p>ТОО «Qaz Bio Medical» проводит работы по аттестации испытательного оборудования согласно СТ РК 2.75-2018 «Порядок аттестации испытательного оборудования»</p>
+        <br/>
+        <p>Аттестации подлежит испытательное оборудование, воспроизводящее нормированные внешние воздействующие факторы и (или) нагрузки.</p>
+      </label-plus-dropdown>
 
 
       <label-plus-dropdown title="Поставка и сервисное обслуживание средств измерений" sendRequest>
@@ -61,7 +65,7 @@
       </label-plus-dropdown>
 
 
-      <label-plus-dropdown title="Поверка средств измерений и медицинского оборудования" sendRequest>
+      <label-plus-dropdown title="Поверка средств измерений и медицинского оборудования">
         <div class="services__check-list">
           <div class="services__check-item" v-for="(checkItem, i) in checkList" :key="i">
             <label>{{ checkItem.label }}</label>

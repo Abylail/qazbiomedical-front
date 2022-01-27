@@ -58,6 +58,7 @@ export default {
     &__picture {
       background: url("~assets/images/info-first.png");
       background-size: cover;
+      background-position-x: 70%;
     }
 
   }
@@ -65,11 +66,11 @@ export default {
   &__second {
     background: $color__light-grey;
     margin-top: -100px;
-    padding: 200px 0;
+    padding: 200px 0 80px;
 
 
     @media(max-width: $bp__mobile) {
-      padding-bottom: 100px;
+      padding-top: 170px;
     }
   }
 
