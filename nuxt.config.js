@@ -56,7 +56,7 @@ module.exports = {
     '@nuxtjs/axios',
     ['nuxt-mail', {
       message: {
-        to: 'bazarbayev.abylay@gmail.com',
+        to: 'manager@qazbm.kz',
       },
       smtp: {
         host: "qazbm.kz",
