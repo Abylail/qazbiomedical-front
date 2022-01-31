@@ -59,8 +59,12 @@ module.exports = {
         to: 'bazarbayev.abylay@gmail.com',
       },
       smtp: {
-        host: "mail.qazbm.kz",
-        port: 587,
+        host: "qazbm.kz",
+        port: 465,
+        auth: {
+          user: 'manager@qazbm.kz',
+          pass: 'xojb_GBiOCb2',
+        },
       },
     }],
   ],
