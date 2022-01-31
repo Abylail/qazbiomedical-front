@@ -71,7 +71,8 @@ export default {
 
 
     @media(max-width: $bp__mobile) {
-      padding-top: 170px;
+      padding-top: 100px;
+      margin-top: -40px;
     }
   }
 
