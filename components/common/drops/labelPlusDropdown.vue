@@ -64,7 +64,7 @@ export default {
 
   &__head {
     display: grid;
-    grid-template-columns: 1fr 25px;
+    grid-template-columns: 1fr 30px;
     column-gap: 10px;
   }
 

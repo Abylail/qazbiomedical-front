@@ -44,10 +44,10 @@ export default {
     ],
 
     advantageList: [
-      { label: "АВТОМАТИЧЕСКАЯ РЕГИСТРАЦИЯ СИ ЗАЯВИТЕЛЯ В БАЗЕ QBM", imgName: "registration.svg" },
-      { label: "ВОЗМОЖНОСТЬ ВЫЕЗДА НА ОБЪЕКТ", imgName: "location.svg" },
-      { label: "ВЫСОКИЙ ПРОФЕССИОНАЛИЗМ", imgName: "pro.svg" },
-      { label: "ОПЕРАТИВНОСТЬ", imgName: "speed.svg" },
+      { label: "Автоматическая регистрация СИ заявителя в базе QBM", imgName: "registration.svg" },
+      { label: "Возможность выезда на объект", imgName: "location.svg" },
+      { label: "Высокий проффесионализм", imgName: "pro.svg" },
+      { label: "Оперативность", imgName: "speed.svg" },
     ]
   })
 }
@@ -87,13 +87,13 @@ export default {
     &__title {
       margin-top: 5px;
       color: $color__font_primary;
-      font-size: $fs__text;
+      font-size: $fs__default;
     }
 
     &__description {
       margin-top: 12px;
       color: $color__font_secondary;
-      font-size: $fs__default;
+      font-size: $fs__default - 2px;
     }
   }
 
@@ -104,6 +104,7 @@ export default {
 
     @media(max-width: $bp__mobile) {
       grid-template-columns: 1fr;
+      margin-top: 70px;
     }
   }
 

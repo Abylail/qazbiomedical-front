@@ -25,8 +25,9 @@
           qazbiomedical@mail.ru
         </a>
 
-        <div class="default-footer__icons">
-          <a href="https://www.instagram.com/qazbiomedical">
+        <div class="default-footer__contact default-footer__icons">
+          Мы в соц.cетях:
+          <a class="ml-10" href="https://www.instagram.com/qazbiomedical">
             <img :src="require('@/assets/icons/instagram.svg')" alt="instagram"/>
           </a>
           <a><img :src="require('@/assets/icons/facebook.svg')" alt="facebook"/></a>
@@ -34,7 +35,7 @@
 
       </div>
 
-      <div class="default-footer__copyright mt-50">
+      <div class="default-footer__copyright">
         {{ currentYear }} © ТОО "QazBioMedical"
       </div>
 
@@ -72,11 +73,12 @@ export default {
     color: white;
     display: flex;
     align-items: center;
-    font-size: $fs__text;
+    font-size: $fs__default;
     margin-right: 30px;
+    text-decoration: none;
     img { margin-right: 10px }
     @media (max-width: $bp__mobile) {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
   }
 
@@ -94,6 +96,7 @@ export default {
     text-align: center;
     color: white;
     font-size: 12px;
+    margin-top: 30px;
   }
 }
 </style>

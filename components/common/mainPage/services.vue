@@ -67,10 +67,12 @@
 
       <label-plus-dropdown title="Поверка средств измерений и медицинского оборудования">
         <div class="services__check-list">
-          <div class="services__check-item" v-for="(checkItem, i) in checkList" :key="i">
+          <div class="services__check-item__wrapper" v-for="(checkItem, i) in checkList" :key="i" :style="`background: center / cover no-repeat url(${checkItem.image})`">
+          <div class="services__check-item">
             <label>{{ checkItem.label }}</label>
             <p>{{ checkItem.description }}</p>
             <base-button type="more" @click="showDetails(checkItem)">Узнать подробнее</base-button>
+          </div>
           </div>
         </div>
       </label-plus-dropdown>
@@ -83,7 +85,6 @@
 </template>
 
 <script>
-import services from "@/config/services";
 import checkList from "@/config/checkList";
 
 import LabelPlusDropdown from "../drops/labelPlusDropdown";
@@ -93,8 +94,6 @@ export default {
   name: "services",
   components: {CheckDetailsModal, LabelPlusDropdown},
   data: () => ({
-    servicesList: services,
-
     countries: [
       { label: "Казахстан", imgName: "kz-flag.png" },
       { label: "Армения", imgName: "arm-flag.png" },
@@ -169,6 +168,7 @@ export default {
     flex-direction: column;
     align-items: center;
     margin-right: 24px;
+    padding: 10px 0;
 
     img {
       height: 50px;
@@ -194,6 +194,7 @@ export default {
     flex-direction: column;
     align-items: center;
     width: 312px;
+    padding: 10px 0;
 
     img {
       width: 100%;
@@ -221,18 +222,25 @@ export default {
   }
 
   &__check-item {
-    height: 260px;
-    width: 280px;
-    background: white;
-    padding: 12px;
+    $padding: 5px;
+    height: calc(100% - 2*$padding);
+    width: calc(100% - 2*$padding);
+    padding: $padding;
+    background: rgba(255, 255, 255, .5);
     box-shadow: 0 4px 40px rgba(0, 0, 0, 0.07);
-    margin-top: 12px;
-    margin-right: 12px;
     overflow: hidden;
+    background-size: cover;
 
-    @media(max-width: $bp__mobile) {
-      width: 100%;
-      height: 150px;
+    &__wrapper {
+      margin-right: 12px;
+      margin-top: 12px;
+      width: 280px;
+      height: 260px;
+
+      @media(max-width: $bp__mobile) {
+        width: 100%;
+        height: 150px;
+      }
     }
 
     label {

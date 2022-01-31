@@ -41,6 +41,7 @@ export default {
 
     @media (max-width: $bp__mobile) {
       grid-template-columns: 2fr 1fr;
+      height: 370px;
     }
 
     &__text {
