@@ -59,7 +59,7 @@ module.exports = {
         to: 'manager@qazbm.kz',
       },
       smtp: {
-        host: "pk63.hoster.kz",
+        host: "pkz63.hoster.kz",
         port: 465,
         auth: {
           user: 'manager@qazbm.kz',
