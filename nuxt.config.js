@@ -59,8 +59,8 @@ module.exports = {
         to: 'manager@qazbm.kz',
       },
       smtp: {
-        host: "pkz63.hoster.kz",
-        port: 465,
+        host: "qazbm.kz",
+        port: 587,
         auth: {
           user: 'manager@qazbm.kz',
           pass: 'xojb_GBiOCb2',
