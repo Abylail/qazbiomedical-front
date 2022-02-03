@@ -61,6 +61,7 @@ export default {
     position: relative;
     --slider-width: 0;
     animation: scroll 20s linear infinite;
+    -webkit-animation: scroll 20s linear infinite;
     margin: 0 auto;
   }
 
