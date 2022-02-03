@@ -121,7 +121,7 @@ export default {
     activeMenuController(scrollY) {
       let activeNext = null;
       Object.keys(this.menu).forEach(key => {
-        if (scrollY >= this.menu[key].offsetTop - 100) {
+        if (scrollY >= this.menu[key].offsetTop - 200) {
           activeNext = key;
         }
         else {

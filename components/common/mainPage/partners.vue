@@ -25,14 +25,25 @@ import partners from "@/config/partners";
 export default {
   name: "partners",
   data: () => ({
+    SCROLL_SECONDS: 35,
     partners,
     doScroll: true,
   }),
   methods: {
     startScroll() {
       const sliderWidth = this.$refs.slider.clientWidth / 2;
-      if (window.innerWidth < sliderWidth) this.$refs.slider.style.setProperty('--slider-width', `-${sliderWidth}px`);
-      else this.doScroll = false;
+      if (window.innerWidth < sliderWidth) {
+        this.$refs.slider.animate([
+          {left: 0},
+          {left: `-${sliderWidth}px`},
+        ], {
+          duration: this.SCROLL_SECONDS * 1000,
+          iterations: Infinity
+        })
+      }
+      else {
+        this.doScroll = false;
+      }
     }
   },
   mounted() {
@@ -56,13 +67,11 @@ export default {
   }
 
   &__slider {
+    $seconds: 35s;
+    --slider-width: -100000px;
     display: table;
     padding: 30px 0;
     position: relative;
-    --slider-width: 0;
-    animation: scroll 20s linear infinite;
-    -webkit-animation: scroll 20s linear infinite;
-    margin: 0 auto;
   }
 
   &__slide {
@@ -76,13 +85,5 @@ export default {
     }
   }
 
-}
-@keyframes scroll {
-  from {
-    left: 0;
-  }
-  100% {
-    left: var(--slider-width);
-  }
 }
 </style>
