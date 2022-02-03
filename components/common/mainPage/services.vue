@@ -222,7 +222,7 @@ export default {
   }
 
   &__check-item {
-    $padding: 5px;
+    $padding: 10px;
     height: calc(100% - 2*$padding);
     width: calc(100% - 2*$padding);
     padding: $padding;
@@ -234,7 +234,7 @@ export default {
     &__wrapper {
       margin-right: 12px;
       margin-top: 12px;
-      width: 280px;
+      width: 270px;
       height: 260px;
 
       @media(max-width: $bp__mobile) {
