@@ -133,7 +133,7 @@ export default {
 
 <style lang="scss" scoped>
 .services {
-  padding: 40px 0 80px;
+  padding: 40px 0 60px;
 
   &__subtitle {
     font-size: $fs__default;

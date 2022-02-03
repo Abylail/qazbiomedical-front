@@ -72,6 +72,12 @@ export default {
         offsetTop: 0,
         type: "anchor"
       },
+      "partners": {
+        title: "Партнеры",
+        id: "partners",
+        offsetTop: null,
+        type: "anchor"
+      },
       "services": {
         title: "Услуги",
         id: "services",
