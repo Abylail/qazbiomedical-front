@@ -6,7 +6,7 @@
       <div class="info__first">
         <div class="info__first__text">
           <div class="info__first__text__wrapper">
-            <h1 class="title">Поверка средств измерений и медицинского оборудывания</h1>
+            <h1 class="title">Поверка средств измерений и медицинского оборудования</h1>
             <p class="description-grey mt-15">Оперативно и проффесионально</p>
 <!--            <base-button class="mt-30" type="more">Узнать подробнее</base-button>-->
           </div>

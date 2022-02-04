@@ -179,6 +179,7 @@ export default {
       margin-top: 10px;
       text-align: center;
       font-size: $fs__default;
+      font-weight: 500;
     }
   }
 
@@ -205,6 +206,7 @@ export default {
       font-size: $fs__default;
       word-break: break-word;
       text-align: center;
+      font-weight: 500;
     }
 
     p {
@@ -247,6 +249,7 @@ export default {
       font-size: $fs__text;
       color: $color__font_primary;
       word-break: break-word;
+      font-weight: 500;
     }
 
     p {
