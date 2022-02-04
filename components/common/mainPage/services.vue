@@ -67,11 +67,11 @@
 
       <label-plus-dropdown title="Поверка средств измерений и медицинского оборудования">
         <div class="services__check-list">
-          <div class="services__check-item__wrapper" v-for="(checkItem, i) in checkList" :key="i" :style="`background: center / cover no-repeat url(${checkItem.image})`">
+          <div class="services__check-item__wrapper" v-for="(checkItem, i) in checkList" :key="i" :style="`background: center / cover no-repeat url(${checkItem.image})`" @click="showDetails(checkItem)">
           <div class="services__check-item">
             <label>{{ checkItem.label }}</label>
             <p>{{ checkItem.description }}</p>
-            <base-button type="more" @click="showDetails(checkItem)">Узнать подробнее</base-button>
+            <base-button type="more">Узнать подробнее</base-button>
           </div>
           </div>
         </div>
@@ -228,7 +228,7 @@ export default {
     height: calc(100% - 2*$padding);
     width: calc(100% - 2*$padding);
     padding: $padding;
-    background: rgba(255, 255, 255, .5);
+    background: rgba(255, 255, 255, .6);
     box-shadow: 0 4px 40px rgba(0, 0, 0, 0.07);
     overflow: hidden;
     background-size: cover;
@@ -238,10 +238,16 @@ export default {
       margin-top: 12px;
       width: 270px;
       height: 260px;
+      transition: .3s;
+      cursor: pointer;
 
       @media(max-width: $bp__mobile) {
         width: 100%;
         height: 150px;
+      }
+
+      &:hover {
+        box-shadow: 0px 0px 14px 0px rgba(34, 60, 80, 0.2);
       }
     }
 
