@@ -24,7 +24,7 @@
       </label-plus-dropdown>
 
 
-      <label-plus-dropdown title="Регистрация средств измерений в реестре ГСИ РК" sendRequest>
+      <label-plus-dropdown title="Регистрация средств измерений в Реестре ГСИ РК" sendRequest>
         <p class="services__subtitle">Испытание СИ для целей утверждения типа:</p>
         <p class="services__text">
           В соответствии с СТ РК 2.21-2019 «Порядок проведения испытаний и утверждения типа средств измерений»
