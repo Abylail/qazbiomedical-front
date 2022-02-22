@@ -4,7 +4,7 @@
 
       <div class="info-slider__image">
         <div class="info-slider__wallpaper"></div>
-        <img :src="require('@/assets/images/microscope.png')" alt="microscope"/>
+        <img :src="require('@/assets/images/microscope.webp')" alt="microscope"/>
       </div>
 
       <div class="info-slider__slider-wrapper">
