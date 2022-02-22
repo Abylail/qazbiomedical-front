@@ -73,6 +73,14 @@ module.exports = {
     }],
   ],
 
+  // SITEMAP
+  sitemap: {
+    hostname: 'https://qazbm.kz',
+    routes: [
+      '/'
+    ]
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
