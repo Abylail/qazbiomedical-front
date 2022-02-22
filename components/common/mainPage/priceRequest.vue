@@ -1,5 +1,5 @@
 <template>
-  <div class="price-request">
+  <div class="price-request" lazy-background="../../../assets/images/priceRequestBackground.png">
     <div class="price-request__wrapper">
       <p class="price-request__title">Узнать стоимость</p>
       <p class="price-request__description">Гарантированно справедливые цены</p>
@@ -77,7 +77,7 @@ export default {
 <style lang="scss" scoped>
 .price-request {
   padding: 100px 0;
-  background: url("../../../assets/images/priceRequestBackground.png");
+  //background: url("../../../assets/images/priceRequestBackground.png");
   color: white;
 
   &__wrapper {

@@ -8,10 +8,10 @@
     <div class="partners__slider-wrapper">
     <div class="partners__slider" ref="slider">
       <a class="partners__slide" v-for="(partner, i) in partners" :href="partner.url" target="_blank">
-        <img :src="partner.image" :alt="partner.url"/>
+        <img :data-src="partner.image" :alt="partner.url" v-lazy-load/>
       </a>
       <a class="partners__slide" v-for="(partner, i) in partners" :href="partner.url" target="_blank" v-show="doScroll" @click.stop>
-        <img :src="partner.image" :alt="partner.url"/>
+        <img :data-src="partner.image" :alt="partner.url" v-lazy-load/>
       </a>
     </div>
     </div>

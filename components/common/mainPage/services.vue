@@ -67,7 +67,7 @@
 
       <label-plus-dropdown title="Поверка средств измерений и медицинского оборудования">
         <div class="services__check-list">
-          <div class="services__check-item__wrapper" v-for="(checkItem, i) in checkList" :key="i" :style="`background: center / cover no-repeat url(${checkItem.image})`" @click="showDetails(checkItem)">
+          <div class="services__check-item__wrapper" v-for="(checkItem, i) in checkList" :key="i" :lazy-background="checkItem.image" @click="showDetails(checkItem)">
           <div class="services__check-item">
             <label>{{ checkItem.label }}</label>
             <p>{{ checkItem.description }}</p>
@@ -240,6 +240,9 @@ export default {
       height: 260px;
       transition: .3s;
       cursor: pointer;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
 
       @media(max-width: $bp__mobile) {
         width: 100%;
