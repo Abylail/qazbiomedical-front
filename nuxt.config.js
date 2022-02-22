@@ -9,7 +9,7 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: '"width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0' },
       { hid: 'description', name: 'description', content: 'Поверка средств измерений и мединцинского оборудывания' },
-      { name: 'keywords', content: 'QazBm, поверка средств измерений, поверка мединцинского оборудывания, Qaz Bio Medical, поверка оборудывания, сервтификация оборудывания' },
+      { name: 'keywords', content: 'qaz, bio, medical, qazbm, мединцинское оборудывание, поверка, поверка средств измерений, поверка мединцинского оборудывания, Qaz Bio Medical, поверка оборудывания, сервтификация оборудывания' },
     ],
     link: [
       { rel: 'icon', type: 'image/svg', href: '/logo.svg' },
@@ -57,6 +57,7 @@ module.exports = {
     '@nuxtjs/axios',
     'nuxt-lazy-load',
     '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
     ['nuxt-mail', {
       message: {
         to: 'manager@qazbm.kz',

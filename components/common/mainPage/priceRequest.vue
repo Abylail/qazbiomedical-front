@@ -14,7 +14,6 @@
         <input
           class="price-request__input price-request__row__left"
           placeholder="Email"
-          v-maska="'XXX!@'"
           v-model="sendForm.email"
         />
         <input
